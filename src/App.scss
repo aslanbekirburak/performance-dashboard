@@ -1,0 +1,20 @@
+$breakpoint-small:1200px;
+
+.graphic-wrapper {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  grid-gap: 1rem;
+  div:nth-child(n){
+    width: 80%;
+    margin: auto;
+    h3 {
+      text-align: center;
+    }
+    p:nth-last-child(1) {
+      text-align: right;
+    }
+  }
+  @media(max-width: $breakpoint-small){
+    grid-template: 1fr/ 1fr;
+  }
+}
