@@ -5,7 +5,7 @@ import "./App.scss";
 function App() {
   const [graphData, setGraphData] = useState();
   useEffect(() => {
-    fetch("http://localhost:3000")
+    fetch("https://bba-performance-analytics.herokuapp.com")
       .then((res) => res.json())
       .then((result) => {
         setGraphData(result);
