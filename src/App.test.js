@@ -1,8 +1,27 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { shallow } from "enzyme";
+import DrawGraphics from './components/drawGraphics';
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it("renders without crashing App", () => {
+  shallow(<DrawGraphics />);
+});
+
+it("renders without crashing App", () => {
+  shallow(<App />);
+});
+
+describe('App', () => {
+  it('should render App', () => {
+    const component = shallow(<App />);
+  
+    expect(component).toMatchSnapshot();
+  });
+});
+
+describe('DrawGraphics', () => {
+  it('should render DrawGraphics', () => {
+    const component = shallow(<DrawGraphics />);
+  
+    expect(component).toMatchSnapshot();
+  });
 });
