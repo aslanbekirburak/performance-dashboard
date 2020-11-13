@@ -3,10 +3,6 @@ import DrawGraphics from './components/drawGraphics';
 import App from "./App";
 
 it("renders without crashing App", () => {
-  shallow(<DrawGraphics />);
-});
-
-it("renders without crashing App", () => {
   shallow(<App />);
 });
 

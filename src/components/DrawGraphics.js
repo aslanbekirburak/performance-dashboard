@@ -9,7 +9,7 @@ const DrawGraphics = ({dataToDraw}) => {
         <div>
         <p>Time</p>
         <LineChart
-            data={coordinateData && coordinateData.map(point => ({...point}))}
+            data={coordinateData || []}
         />
         <p>Count</p>
         </div>

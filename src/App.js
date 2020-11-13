@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import DrawGraphics from "./components/drawGraphics";
+import DrawGraphics from "./components/DrawGraphics";
 import "./App.scss";
+
+const URL = "https://bba-performance-analytics.herokuapp.com"
 
 function App() {
   const [graphData, setGraphData] = useState();
   useEffect(() => {
-    fetch("https://bba-performance-analytics.herokuapp.com")
+    fetch(URL)
       .then((res) => res.json())
       .then((result) => {
         setGraphData(result);
-        console.log("RESULT ", result);
       });
   }, []);
   return (
